@@ -16,7 +16,7 @@
     },
     {
       "name": "imageLink",
-      "displayName": "Custom Image Link (optional)",
+      "displayName": "Existing Profile Picture",
       "type": "string"
     },
     {
