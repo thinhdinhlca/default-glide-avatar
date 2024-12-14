@@ -32,12 +32,12 @@
     {
       "name": "size",
       "displayName": "Avatar Size (default: 256)",
-      "type": "string"
+      "type": "number"
     },
     {
       "name": "bold",
       "displayName": "Bold Text (true/false, default: true)",
-      "type": "string"
+      "type": "boolean"
     }
   ],
   "result": {
