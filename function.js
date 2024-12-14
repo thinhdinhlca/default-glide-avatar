@@ -9,6 +9,15 @@ window.function = function (fullName, email, imageLink, background, color, size,
   size = size?.value ?? "256";         // Default avatar size
   bold = bold?.value ?? "true";        // Default bold text
 
+  // Use email if fullName is empty
+  let name = fullName.trim() || email.trim();  // Ensure both are trimmed of leading/trailing spaces
+  name = encodeURIComponent(name);  // URL encode the name to ensure it's safe for the URL
+  
+  // If the name is still empty after trimming and fallback, handle gracefully
+  if (!name) {
+    name = "No Name";  // Fallback to a default value if both are empty
+  }
+
   // Directly return the image link if it's available
   if (imageLink) {
     return imageLink;
@@ -16,10 +25,6 @@ window.function = function (fullName, email, imageLink, background, color, size,
   
   // Base URL for UI Avatars
   const baseURL = "https://ui-avatars.com/api/";
-  
-  // Attempt to split the full name into first and last names, fall back to the full name if not possible
-  let name = fullName || email;
-  name = encodeURIComponent(name);  // URL encode the name to ensure it's safe for the URL
   
   // Construct the query parameters
   const params = [
