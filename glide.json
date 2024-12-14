@@ -1,56 +1,46 @@
 {
   "kind": "column",
-  "name": "Carousel",
-  "description": "Carousel",
-  "author": "Manu.n",
+  "name": "Avatar Generator",
+  "description": "Generates avatar URLs based on full name or email address with customizable options.",
+  "author": "Thinh Dinh",
   "params": [
     {
-      "name": "img",
-      "displayName": "Image List (url separate by ',')",
+      "name": "fullName",
+      "displayName": "Full Name",
       "type": "string"
     },
     {
-      "name": "legend",
-      "displayName": "Legend List",
+      "name": "email",
+      "displayName": "Email Address",
       "type": "string"
     },
     {
-      "name": "delimiter",
-      "displayName": "Delimiter for legends list (default to comma)",
+      "name": "imageLink",
+      "displayName": "Custom Image Link (optional)",
       "type": "string"
     },
     {
-      "name": "dot_color",
-      "displayName": "Active dot color (default to #717171)",
+      "name": "background",
+      "displayName": "Background Color (hex code, default: 291755)",
       "type": "string"
     },
     {
-      "name": "img_height",
-      "displayName": "Full Cloudinary resized height (default to 750px)",
-      "type": "number"
-    },
-    {
-      "name": "img_resized",
-      "displayName": "On-screen Cloudinary resized height (default to 375px)",
-      "type": "number"
-    },
-    {
-      "name": "fit",
-      "displayName": "Fit : cover, fill, contain, scale-down, none",
+      "name": "color",
+      "displayName": "Font Color (hex code, default: ffffff)",
       "type": "string"
     },
     {
-      "name": "shortcuts",
-      "displayName": "Shortcuts : dot, thumbnail",
+      "name": "size",
+      "displayName": "Avatar Size (default: 256)",
       "type": "string"
     },
     {
-      "name": "time",
-      "displayName": "Time (seconds), automatic slide",
-      "type": "number"
+      "name": "bold",
+      "displayName": "Bold Text (true/false, default: true)",
+      "type": "string"
     }
   ],
   "result": {
-    "type": "uri"
+    "type": "string"
   }
 }
